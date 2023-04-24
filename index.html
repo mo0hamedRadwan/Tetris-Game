@@ -1,0 +1,42 @@
+<!-- 
+	Tutorial Link : https://www.youtube.com/watch?v=HEsAr2Yt2do
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tetris Game</title>
+</head>
+<body>
+    
+    <div class="game">
+        <canvas class="canvas"></canvas>
+        <div class="dashboard">
+            <h1>Tetris</h1>
+            <h2 class="score">Score : <span class="score-num">0</span></h2>
+            <div class="controls">
+                <h2>Controls</h2>
+                <div class="content">
+                    <div>A : Move Left</div>
+                    <div>D : Move Right</div>
+                    <div>S : Move Down</div>
+                    <div>W : Rotate Right</div>
+                    <div>Q : Rotate Left</div>
+                </div>
+            </div>
+        </div>
+        <div class="game-over">
+            <div class="content">
+                <h3 class="score-num">0</h3>
+                <p>Points</p>
+                <button class="start-game-btn">Start Game</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
