@@ -8,6 +8,7 @@ canvas.height = 400;
 
 const context = canvas.getContext("2d");
 // context.scale(20, 20);
+const backgroundSound = createAudio("audio/Background.mp3");
 
 let dropCounter;
 let dropInterval;
@@ -284,6 +285,12 @@ function animate(time = 0) {
     scoreEl[0].innerHTML = score;
 }
 
+function createAudio(path) {
+    const audio = new Audio();
+    audio.src = path;
+    return audio;
+}
+
 function initGame() {
     game = new GridGame(gameWidth, gameHeight);
     rowsFill = 100;
@@ -292,6 +299,9 @@ function initGame() {
     dropCounter = 0;
     dropInterval = 1000;
     lastTime = 0;
+
+    backgroundSound.play();
+    backgroundSound.volume = 0.1;
 
     animate();
 }
